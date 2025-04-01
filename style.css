@@ -1,0 +1,241 @@
+body.light {
+    font-family: Arial, Helvetica, sans-serif;
+    background: url('https://t3.ftcdn.net/jpg/05/13/59/72/360_F_513597277_YYqrogAmgRR9ohwTUnOM784zS9eYUcSk.jpg') no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+}
+
+body.light .todo-container {
+    background: #ffefcb;
+    color: #3d2b1f;
+    border: 2px solid #d3d3b3;
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0);
+    margin-bottom: 20px;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+
+body.light button {
+    background: #8b4513;
+}
+
+body.light button:hover {
+    background-color: #64320f;
+}
+
+body.light button.remove {
+    background-color: #c8ad7f;
+}
+
+body.light button.complete {
+    background-color: #4b5320;
+}
+
+body.dark {
+    background: url('https://png.pngtree.com/thumb_back/fh260/background/20231025/pngtree-black-textured-background-pocket-planner-blank-to-do-list-with-checklist-image_13709565.png') no-repeat center center fixed;
+    background-size: cover;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+}
+
+body.dark .todo-container {
+    background-color: #2f2f2f;
+    color: #ffffff;
+    border: 2px solid #555;
+    width: 45%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0);
+    margin-bottom: 20px;
+    text-align: left;
+    transition: all 0.3s ease;
+    margin-right: 20px;
+    
+}
+
+body.dark button:hover {
+    background-color: #3b0066;
+}
+
+body.dark button.remove {
+    background-color: #b8890b;
+}
+
+body.dark button.complete {
+    background-color: #8b4513;
+}
+
+#progress-bar-container {
+    width: 100%;
+    max-width: 500px;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    margin-top: 20px;
+    height: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+    padding: 3px;
+}
+
+#progress-bar {
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 5px;
+    transition: width 0.5s ease-in-out;
+}
+
+#progress-text {
+    text-align: center;
+    margin-top: 5px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+
+input {
+    width: 70%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 15px;
+    background: #3360f1;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #1f36a9;
+}
+
+button.remove:hover {
+    background-color: #c82e2e;
+}
+
+button.complete:hover {
+    background-color: #1f7e37;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+body.dark li {
+    background-color: #2d2d2dee;
+    margin: 5px 0;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    border: rgba(154, 109, 51, 0.933)
+}
+
+
+body.light li{
+    background-color: #ffe4b6ee;
+    margin: 5px 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button.remove {
+    background-color: red;
+}
+
+button.complete {
+    background-color: #28a762;
+}
+
+button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+li button {
+    margin-left: 5px;
+}
+
+.priority {
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+
+#taskLista li.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+li {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+li.fade {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#completedList li {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#completedList li.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.category {
+    font-weight: bold;
+    margin-left: 5px;
+    color: #ff6347;
+}
+
+li[data-category="work"]{
+    border-left: 5px solid #4caf50;
+}
+li[data-category="home"]{
+    border-left: 5px solid #2196f3;
+}
+li[data-category="personal"]{
+    border-left: 5px solid #ff9800;
+}
+li[data-category="study"]{
+    border-left: 5px solid #9c27b0;
+}
+li[data-category="health"]{
+    border-left: 5px solid #f44336;
+}
+li[data-category="other"]{
+    border-left: 5px solid #9e9e9e;
+}
+

@@ -1,0 +1,44 @@
+<html lang="sv"> 
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do Lista</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="todo-container">
+        <h2>To-Do Lista</h2>
+        <input type="text" id="taskInput" placeholder="Lägg till en uppgift">
+        <select id="priorityInput">
+            <option value="1">Hög prioritet</option>
+            <option value="2">Mellan prioritet</option>
+            <option value="3">Låg prioritet</option>
+        </select>
+        <input type="datetime-local" id="deadlineInput">
+        <select id="categoryInput">
+            <option value="work">Arbete</option>
+            <option value="home">Hem</option>
+            <option value="personal">Personligt</option>
+            <option value="study">Studier</option>
+            <option value="health">Hälsa</option>
+            <option value="other">Övrigt</option>
+            <option value="custom">Skapa ny kategori...</option>
+        </select>
+        <button onclick="addTask()">Lägg Till</button>
+        <button onclick="clearAll()">Rensa alla</button>
+        <button onclick="toggleTheme()">Byt Tema</button>
+        <h3>Pågående Uppgifter</h3>
+        <ul id="taskLista"></ul>
+        <h3>Avklarade Uppgifter</h3>
+        <ul id="completedList"></ul>
+    </div>
+    <div id="progress-bar-container">
+        <div id="progress-bar"></div>
+        <div id="progress-text"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
